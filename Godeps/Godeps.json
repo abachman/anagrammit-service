@@ -1,0 +1,10 @@
+{
+	"ImportPath": "github.com/abachman/anagrammit-service",
+	"GoVersion": "devel +c2aa504120c3 Fri Oct 17 21:28:47 2014 +0400",
+	"Deps": [
+		{
+			"ImportPath": "github.com/abachman/anagrammit-go/anagrammit",
+			"Rev": "8a75beb1b0adbb41c869c8064399355c08ad8a9d"
+		}
+	]
+}
