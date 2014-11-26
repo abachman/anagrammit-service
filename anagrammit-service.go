@@ -32,6 +32,8 @@ func filtered(word string) string {
 
 func anagramHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/plain")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+
 	phrase := r.FormValue("phrase")
 
 	phrase = filtered(phrase)
