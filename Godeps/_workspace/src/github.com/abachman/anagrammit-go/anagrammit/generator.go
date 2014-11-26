@@ -2,7 +2,6 @@ package anagrammit
 
 import (
 	"fmt"
-	"math/rand"
 )
 
 type GeneratorArgs struct {
@@ -51,18 +50,8 @@ func (g *Generator) Generate(inputPhrase string, output chan string) {
 		// Calculated
 		initialLexicon := g.baseLexicon.Generate(0, inputWord)
 
-		// shuffle
-		// for i from n − 1 downto 1 do
-		//      j ← random integer with 0 ≤ j ≤ i
-		//      exchange a[j] and a[i]
 		if g.Shuffle {
-			var j int
-			for i := initialLexicon.Length - 1; i > 0; i-- {
-				j = rand.Intn(i)
-				w := initialLexicon.Words[j]
-				initialLexicon.Words[j] = initialLexicon.Words[i]
-				initialLexicon.Words[i] = w
-			}
+			ShuffleLexicon(initialLexicon)
 		}
 
 		// hold per-process variables

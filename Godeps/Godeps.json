@@ -4,7 +4,7 @@
 	"Deps": [
 		{
 			"ImportPath": "github.com/abachman/anagrammit-go/anagrammit",
-			"Rev": "8a75beb1b0adbb41c869c8064399355c08ad8a9d"
+			"Rev": "33c9b92debbda7317acc272637352b3d1aee430d"
 		}
 	]
 }
