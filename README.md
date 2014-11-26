@@ -6,3 +6,5 @@ Do one thing and do it adequately.
     $ heroku create
     $ git push heroku master
 
+powered by on https://github.com/abachman/anagrammit-go.
+
