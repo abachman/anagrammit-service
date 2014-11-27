@@ -56,7 +56,7 @@ func anagramHandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	wordLen := flag.Int("wordlength", 3, "minimum word length")
-	limit := flag.Int("limit", 50, "result limit")
+	limit := flag.Int("limit", 100, "result limit")
 	shuffle := flag.Bool("shuffle", true, "shuffle lexicon")
 	port := flag.Int("port", 8080, "port to listen on")
 	flag.Parse()
@@ -65,7 +65,7 @@ func main() {
 		WordLength:  *wordLen,
 		ResultLimit: *limit,
 		Shuffle:     *shuffle,
-		WordsFile:   "words/dictionary.txt",
+		WordsFile:   "words/common-word-list.txt",
 	}
 
 	generator = anagrammit.NewGenerator(args)
